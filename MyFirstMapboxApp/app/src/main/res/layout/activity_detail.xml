@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yossawin.myfirstmapboxapp.DetailActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapview"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        mapbox:layout_constraintHorizontal_bias="1.0"
+        mapbox:layout_constraintLeft_toLeftOf="parent"
+        mapbox:layout_constraintRight_toRightOf="parent"
+        mapbox:layout_constraintTop_toTopOf="parent"
+        mapbox:mapbox_cameraTargetLat="41.885"
+        mapbox:mapbox_cameraTargetLng="-87.679"
+        mapbox:mapbox_cameraTilt="20"
+        mapbox:mapbox_cameraZoom="12"
+        mapbox:mapbox_styleUrl="@string/mapbox_style_mapbox_streets"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+    </com.mapbox.mapboxsdk.maps.MapView>
+
+    <TableLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/mapview">
+        <TableRow>
+            <TextView
+                android:textColor="@android:color/black"
+                android:layout_margin="1dp"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="#ffcccccc"
+                android:text="ชื่อ"
+                android:id="@+id/col1"/>
+            <TextView
+                android:textColor="@android:color/black"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:text="Latitude" />
+            <TextView
+                android:textColor="@android:color/black"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="#ffcccccc"
+                android:text="Logitude" />
+            <TextView
+                android:textColor="@android:color/black"
+                android:gravity="center_horizontal"
+                android:layout_weight="1"
+                android:layout_margin="1dp"
+                android:background="@android:color/white"
+                android:text="เวลาา" />
+        </TableRow>
+    </TableLayout>
+    
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent">
+        <TableLayout
+            android:id="@+id/maintable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <TableRow>
+                <TextView
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginLeft="1dp"
+                    android:text="Col1" />
+                <TextView
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:text="Col2" />
+                <TextView
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:text="Col3" />
+                <TextView
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:text="Col4" />
+                <TextView
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:text="Col5" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

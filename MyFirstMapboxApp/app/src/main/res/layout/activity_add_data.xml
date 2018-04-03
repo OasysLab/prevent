@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yossawin.myfirstmapboxapp.AddDataActivity">
+    
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ชนิด"
+        android:textSize="25dp"
+        android:id="@+id/textView"
+        android:layout_marginLeft="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="44dp" />
+    <Spinner
+        android:id="@+id/type_spinner"
+        android:layout_width="202dp"
+        android:layout_height="40dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintLeft_toRightOf="@+id/textView"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintHorizontal_bias="0.648"></Spinner>
+    
+    
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ชื่อ"
+        android:textSize="25dp"
+        android:id="@+id/textView2"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginLeft="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="44dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/name_auto"
+        android:layout_width="202dp"
+        android:layout_height="40dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.711"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/type_spinner" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ข้อความ"
+        android:textSize="25dp"
+        android:id="@+id/textView3"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:layout_marginLeft="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="44dp" />
+
+    <EditText
+        android:id="@+id/note_more"
+        android:layout_width="185dp"
+        android:layout_height="70dp"
+        android:background="@drawable/back"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/name_auto"
+        android:layout_marginRight="34dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:hint="คำอธิบายเพิ่มเติม"
+        android:gravity="top"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="พิกัด"
+        android:textSize="25dp"
+        android:layout_marginLeft="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="44dp"
+        android:id="@+id/textView4"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+    <ImageView
+        android:layout_width="297dp"
+        android:layout_height="97dp"
+        android:background="@drawable/back"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        android:id="@+id/imageView"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Latitude"
+        android:layout_marginLeft="48dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView"
+        android:id="@+id/textView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        android:layout_marginTop="15dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Longitude"
+        android:id="@+id/textView5"
+        android:layout_marginRight="57dp"
+        app:layout_constraintRight_toRightOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        android:layout_marginTop="15dp" />
+    <TextView
+
+        android:layout_width="91dp"
+        android:layout_height="33dp"
+        android:text=""
+        android:gravity="center"
+        android:background="@drawable/back"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        android:id="@+id/lat_text" />
+    <TextView
+        android:layout_width="91dp"
+        android:layout_height="33dp"
+        android:text=""
+        android:gravity="center"
+        android:background="@drawable/back"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        android:id="@+id/longi_text"
+        app:layout_constraintLeft_toRightOf="@+id/lat_text"
+        android:layout_marginLeft="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="รูปภาพ"
+        android:textSize="25dp"
+        android:layout_marginLeft="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/textView6"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:layout_width="277dp"
+        android:layout_height="112dp"
+        android:background="@drawable/back"
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.51" />
+
+    //---------------------------------------------------------
+
+    <ImageView
+        android:id="@+id/picture1"
+        android:layout_width="45dp"
+        android:layout_height="46dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView2"
+        android:background="@drawable/camara"/>
+
+    <ImageView
+        android:id="@+id/picture2"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/picture1"
+        android:layout_marginLeft="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/picture3"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/picture2"
+        android:layout_marginLeft="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/picture4"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/picture3"
+        android:layout_marginLeft="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/picture5"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        android:layout_marginTop="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/picture4"
+        android:layout_marginLeft="8dp" />
+
+    <ImageView
+        android:id="@+id/picture6"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView2"
+        />
+
+    <ImageView
+        android:id="@+id/picture7"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/picture6"
+        android:layout_marginLeft="8dp"
+         />
+
+    <ImageView
+        android:id="@+id/picture8"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/picture7"
+        android:layout_marginLeft="8dp"
+         />
+
+    <ImageView
+        android:id="@+id/picture9"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/picture8"
+        android:layout_marginLeft="8dp"
+        />
+
+    <ImageView
+        android:id="@+id/picture10"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/picture9"
+        android:layout_marginLeft="8dp" />
+
+//----------------------------------------------------------------
+    <Button
+        android:id="@+id/submit_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/Start_Colour"
+        android:onClick="onSubmitButtonClick"
+        android:text="บันทึก"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
